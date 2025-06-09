@@ -22,7 +22,7 @@ from mcp_use import MCPAgent, MCPClient
 
 async def run_memory_chat():
     """Run a chat using MCPAgent's built-in conversation memory."""
-    #HF_TOKEN = "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"
+    
     # Config file path - change this to your config file
     config_file = "tools.json"
 
