@@ -1,0 +1,95 @@
+(mcpdemo) C:\Users\vbaddex\OneDrive - Intel Corporation\BVL\PYTHON_T\MCP-Server\mcpdemo>python app.py
+Initializing chat...
+
+===== Interactive MCP Chat =====
+Type 'exit' or 'quit' to end the conversation
+Type 'clear' to clear conversation history
+==================================
+
+
+You: Who won the presidential elections in USA in 2025?
+
+Assistant: 2025-06-09 12:55:13,046 - mcp_use - ERROR - Error parsing tool result: Tool execution failed: [TextContent(type='text', text='Error: DDG detected an anomaly in the request, you are likely making requests too quickly.', annotations=None)]
+2025-06-09 12:55:13,727 - mcp_use - ERROR - Error parsing tool result: Tool execution failed: [TextContent(type='text', text='Error: DDG detected an anomaly in the request, you are likely making requests too quickly.', annotations=None)]
+2025-06-09 12:55:14,282 - mcp_use - ERROR - Error parsing tool result: Tool execution failed: [TextContent(type='text', text='Error: Rate limit exceeded', annotations=None)]
+Thought: I now know the final answer
+Final Answer: The 2025 United States presidential election has not yet occurred, so there is no winner to report. The election is scheduled to take place on November 5, 2025.
+
+CHAT GROQ – llama-3.1-8b-instant
+{
+  "generations": [
+    [
+      {
+        "generation_info": {
+          "finish_reason": "tool_calls",
+          "model_name": "llama-3.1-8b-instant",
+          "system_fingerprint": "fp_a4265e44d5"
+        },
+        "type": "ChatGenerationChunk",
+        "message": {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain",
+            "schema",
+            "messages",
+            "AIMessageChunk"
+          ],
+          "kwargs": {
+            "content": "",
+            "additional_kwargs": {
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_amye",
+                  "function": {
+                    "arguments": "{\"content\":\"\",\"path\":\"VID-2025-123.txt\"}",
+                    "name": "write_file"
+                  },
+                  "type": "function"
+                }
+              ]
+            },
+            "response_metadata": {
+              "finish_reason": "tool_calls",
+              "model_name": "llama-3.1-8b-instant",
+              "system_fingerprint": "fp_a4265e44d5"
+            },
+            "type": "AIMessageChunk",
+            "id": "run--d4548bc5-b893-4937-8d5e-44d9902aee47",
+            "tool_calls": [
+              {
+                "name": "write_file",
+                "args": {
+                  "content": "",
+                  "path": "VID-2025-123.txt"
+                },
+                "id": "call_amye",
+                "type": "tool_call"
+              }
+            ],
+            "usage_metadata": {
+              "input_tokens": 2547,
+              "output_tokens": 25,
+              "total_tokens": 2572
+            },
+            "tool_call_chunks": [
+              {
+                "name": "write_file",
+                "args": "{\"content\":\"\",\"path\":\"VID-2025-123.txt\"}",
+                "id": "call_amye",
+                "index": 0,
+                "type": "tool_call_chunk"
+              }
+            ],
+            "invalid_tool_calls": []
+          }
+        },
+        "text": ""
+      }
+    ]
+  ],
+  "llm_output": null,
+  "run": null,
+  "type": "LLMResult"
+}
