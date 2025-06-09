@@ -17,7 +17,7 @@ from mcp_use import MCPAgent, MCPClient
 
 async def run_memory_chat():
     """Run a chat using MCPAgent's built-in conversation memory."""
-    #HF_TOKEN = "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"
+   
     # Config file path - change this to your config file
     config_file = "duckduckgo.json"
 
@@ -27,8 +27,8 @@ async def run_memory_chat():
     client = MCPClient.from_config_file(config_file)
 
     
-    
-    local_model = "C:/Users/vbaddex/.cache/huggingface/hub/models--NousResearch--Nous-Hermes-2-Mistral-7B-DPO-GGUF/snapshots/eb85cf06e8663157611e8ee472e61b43f50ee49f/Nous-Hermes-2-Mistral-7B-DPO.Q2_K.gguf"
+    #Give the downloaded model-path
+    local_model = "models--NousResearch--Nous-Hermes-2-Mistral-7B-DPO-GGUF/snapshots/eb85cf06e8663157611e8ee472e61b43f50ee49f/Nous-Hermes-2-Mistral-7B-DPO.Q2_K.gguf"
     llm = ChatLlamaCpp(
     temperature=0.5,
     model_path=local_model,
